@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ 'Editar pieza' if piece else 'Nueva pieza' }}</h1>
+<form method="post">
+    <label>Nombre: <input name="name" required value="{{ piece.name if piece else '' }}"></label><br>
+    <button type="submit">Guardar</button>
+</form>
+{% endblock %}\n

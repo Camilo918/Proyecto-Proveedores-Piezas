@@ -1,0 +1,1 @@
+*.pyc\n__pycache__/\ndata.sqlite\n.env\nvenv/\n

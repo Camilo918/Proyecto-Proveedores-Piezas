@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ 'Editar proveedor' if provider else 'Nuevo proveedor' }}</h1>
+<form method="post">
+    <label>Nombre: <input name="name" required value="{{ provider.name if provider else '' }}"></label><br>
+    <label>Dirección: <input name="address" value="{{ provider.address if provider else '' }}"></label><br>
+    <label>Ciudad: <input name="city" value="{{ provider.city if provider else '' }}"></label><br>
+    <label>Provincia: <input name="province" value="{{ provider.province if provider else '' }}"></label><br>
+    <button type="submit">Guardar</button>
+</form>
+{% endblock %}\n
