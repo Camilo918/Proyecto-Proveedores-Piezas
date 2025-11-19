@@ -1,0 +1,30 @@
+Es una biblioteca que permite trabajar con bases de datos relacionale usando objetos de un lenguaje de programacion en lugar de escribir SQL directamente
+Crea tablas automáticamente a partir de tus modelos
+Convierte filas en objetos Python
+Convierte objetos Python en filas
+Hace validación de datos
+Facilita relaciones (uno a muchos, muchos a muchos)
+Evita escribir SQL repetitivo
+Permite cambiar de motor de BD sin reescribir el código
+
+VENTAJAS:
+Código más limpio y fácil de mantener
+En vez de escribir SQL por todos lados, trabajás con clases y objetos
+Evita errores de SQL
+El ORM genera SQL válido por su cuenta
+Protección contra inyecciones SQL (SQL Injection)
+El ORM parametriza las consultas automáticamente más seguro
+Independencia del motor de BD
+Podés cambiar de SQLite → MySQL → PostgreSQL sin reescribir toda la app.
+Manejo sencillo de relaciones
+Migraciones automáticas
+Con herramientas como Flask-Migrate, podés actualizar la estructura sin borrar la BD.
+Se programa más rápido y con menos errores.
+
+DESVENTAJAS:
+Menor rendimiento
+Las consultas generadas por el ORM a veces no son tan optimizadas como SQL puro.
+Consultas específicas pueden ser más difíciles de expresar en ORM.
+Puede generar SQL innecesario
+Ejemplo: demasiados JOIN automáticos, lo que puede ralentizar la app.
+El ORM hace cosas por detrás que no siempre se ven, lo que puede dejar dudas sobre el SQL real que se ejecuta.
