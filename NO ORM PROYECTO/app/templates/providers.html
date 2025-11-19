@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Proveedores</h1>
+<a href="{{ url_for('main.new_provider') }}">Nuevo proveedor</a>
+<table>
+    <tr><th>ID</th><th>Nombre</th><th>Dirección</th><th>Ciudad</th><th>Provincia</th><th>Acciones</th></tr>
+    {% for p in providers %}
+    <tr>
+        <td>{{ p.id }}</td>
+        <td><a href="{{ url_for('main.provider_detail', pid=p.id) }}">{{ p.name }}</a></td>
+        <td>{{ p.address }}</td>
+        <td>{{ p.city }}</td>
+        <td>{{ p.province }}</td>
+        <td>
+            <a href="{{ url_for('main.edit_provider', pid=p.id) }}">Editar</a>
+            <form method="post" action="{{ url_for('main.delete_provider', pid=p.id) }}" style="display:inline" onsubmit="return confirm('Eliminar?')">
+                <button type="submit">Eliminar</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}\n
